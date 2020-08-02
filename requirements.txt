@@ -9,6 +9,7 @@ dj-database-url==0.5.0
 Django==3.0.8
 django-crispy-forms==1.9.2
 django-extensions==3.0.3
+django-filter==2.3.0
 django-heroku==0.3.1
 djangorestframework==3.11.0
 djangorestframework-datatables==0.5.2
