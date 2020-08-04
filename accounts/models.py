@@ -130,3 +130,11 @@ class User(AbstractBaseUser):
     objects = UserManager()
 
 admin.site.register(User)
+
+class Client(models.Model):
+    email = models.ForeignKey(User,on_delete=models.CASCADE)
+    name = models.CharField(max_length=254)
+    senha = models.CharField(max_length=254)
+
+
+admin.site.register(Client)
