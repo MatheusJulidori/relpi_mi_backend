@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'relpi_miAPP',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
