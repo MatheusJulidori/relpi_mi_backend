@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+		<title>Cadastro - RelpiMi</title> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+		<link rel="stylesheet" type="text/css" href={% static 'relpi_miAPP/login-register/style.css' %}>
+	</head>
+
+	<body id="background">
+    <section id="header">
+
+        <div id="logo">
+            <!--suppress CheckImageSize -->
+            <img alt="Imagem do Logo" src={% static '/relpi_miAPP/images/escrito_branco.png' %} height="100px">
+        </div>
+
+        <!--Inicio Menu-->
+        <div id="menu">
+            <ul id="navegacao-horizontal">
+                <li class="home">
+                    <a href="../../home">Home</a>
+                </li>
+                <li class="sobre">
+                    <a href="../../team/">Nossa Equipe</a>
+                </li>
+                <li class="contato">
+                    <a href="../../contact/">Contato</a>
+                </li>
+                <li class="register">
+                    <a href="../register/">Cadastre-se</a>
+                </li>
+                <li class="login">
+                    <a href="../login/">Login</a>
+                </li>
+            </ul>
+            <!--Fim Menu-->
+        </div>
+        <!--Fim Cabeçalho-->
+    </section>
+        
+        <section id="container">
+            <h2 id="title-form-cadastro">Cadastro</h2>
+            <form id="form-cadastro" method = 'POST'>
+
+                {% csrf_token %}
+
+               {{form.as_p}}
+
+                <button id="register-user" class="botao bto-principal">Cadastrar</button>
+            </form>
+
+        </section>
+    </body>
+        
+
+</html>

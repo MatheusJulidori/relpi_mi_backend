@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from django.conf import settings
+from django.contrib.auth.views import auth_logout
 
 from .forms import RegisterForm
 
@@ -18,3 +19,8 @@ def signup(request):
     else:
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})
+
+def logout_request(request):
+    auth_logout(request)
+    #message.info(request, "Logged out successfully")
+    return redirect("/accounts/login/")
