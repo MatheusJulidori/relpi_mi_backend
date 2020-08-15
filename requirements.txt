@@ -21,7 +21,6 @@ jmespath==0.10.0
 mysqlclient==2.0.1
 pathspec==0.5.9
 psycopg2==2.8.5
-pypiwin32==223
 python-dateutil==2.8.0
 pytz==2020.1
 PyYAML==5.3.1
