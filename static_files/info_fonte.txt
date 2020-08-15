@@ -1,0 +1,6 @@
+Cores:
+Verde: #138971
+Azul: #134363
+
+Gradient:
+https://uigradients.com/
