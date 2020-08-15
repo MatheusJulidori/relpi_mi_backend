@@ -1,0 +1,93 @@
+*{
+	font-family: "Trebuchet MS",Helvetica,sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+html body{
+	background: #283c86;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #138971, #134363);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #138971, #134363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.container-fluid .row{
+    margin: 0;
+}
+
+/*Nav Bar*/
+
+@media (min-width: 768px) {
+.navbar-brand.abs
+    {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+
+.navbar{
+    border-bottom: 2px solid #607587;
+    margin-bottom: 20px;
+	background-color: black;
+}
+
+.nav-link{
+	color: white;
+    font-size: 18px;
+}
+
+.nav-link .fa-user-plus,
+.nav-link .fa-user,
+.nav-link .fa-home,
+.nav-link .fa-phone-square,
+.nav-link .fa-address-card,
+.nav-link .fa-sign-out,
+.nav-link .fa-wrench{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+/*Rodape*/
+
+.footer-bg{
+    background-color: black;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    color: white;
+}
+
+/*Login*/
+
+.auth-card{
+    margin-bottom: 30px;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: bolder;
+}
+
+#login-form .forgot-pass{
+    text-align: center;
+    margin-top: 20px;
+}
