@@ -27,7 +27,7 @@ SECRET_KEY = '5c7*p%*q0r2d^!p0y0@jk_m(#hc7*=g5bq25=+e%(2#k-$hm78'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://relpi-mi-back.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['relpimiback.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
