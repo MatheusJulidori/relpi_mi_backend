@@ -87,6 +87,7 @@ class User(AbstractBaseUser):
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
+    #phone =
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name','birth_date','cidade'] # Email & Password are required by default.
