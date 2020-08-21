@@ -12,7 +12,7 @@ urlpatterns = [
     path('', include(router.urls)),
 
     path('login/', LoginListView.as_view(), name='login_list'),
-    #path('register/', RegisterListView.as_view(), name='login_list'),
+    path('register/', RegisterListView.as_view(), name='register_list'),
 
 ]
 
