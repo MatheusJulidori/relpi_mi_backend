@@ -7,15 +7,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-class ClientSerializer(serializers.ModelSerializer):
+class LoginSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Client
-        fields = '__all__'
-
-class HelperSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Helper
-        fields = '__all__'
+        model = User
+        fields = ['email', 'password']
 
 class PedidosSerializer(serializers.ModelSerializer):
     class Meta:

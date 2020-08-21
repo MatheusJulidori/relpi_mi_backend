@@ -18,17 +18,19 @@ class LoginListView(APIView):
     #     serializer = UserSerializer(queryset, many=False)
     #     return Response(serializer.data)
 
-    # def get(selfself, request, format=None):
-    #     return Response(status=status.HTTP_200_OK)
+    def get(selfself, request, format=None):
+        return Response(status=status.HTTP_200_OK)
 
     def post(self, request, *args, **kwargs):
         try:
             password = request.data.get('password', None)
             email = request.data.get('email', None)
-            qs = User.objects.filter()
-            results = {'test': '1', 'email': 'as@gamial'}
-
-            return Response(data=results, status=status.HTTP_200_OK)
+            qs = User.objects.filter(email=email, password=password).values()
+            if not qs:
+                return Response(status=status.HTTP_401_UNAUTHORIZED)
+            #results = {'data': qs}
+            return Response(data=qs, status=status.HTTP_200_OK)
+            #return Response(data=results, status=status.HTTP_200_OK)
         except:
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

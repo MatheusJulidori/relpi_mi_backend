@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class UserManager(BaseUserManager):
@@ -85,7 +86,7 @@ class User(AbstractBaseUser):
     full_name = models.CharField(max_length=255,blank=True,null=True)
     birth_date = models.DateField()
     cidade = models.CharField(max_length=255,blank=True,null=True)
-    phone = models.IntegerField(default=0)
+    phone = PhoneNumberField()
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)

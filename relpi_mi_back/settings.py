@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'relpi_miAPP',
     'crispy_forms',
     'rest_framework',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
