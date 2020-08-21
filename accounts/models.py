@@ -86,7 +86,7 @@ class User(AbstractBaseUser):
     full_name = models.CharField(max_length=255,blank=True,null=True)
     birth_date = models.DateField()
     cidade = models.CharField(max_length=255,blank=True,null=True)
-    phone = PhoneNumberField()
+    phone = models.CharField(max_length=255,blank=True,null=True)
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
