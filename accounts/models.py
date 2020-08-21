@@ -23,6 +23,8 @@ class UserManager(BaseUserManager):
             raise ValueError('Preencha a data de nascimento corretamente')
         if not cidade:
             raise ValueError('Preencha a cidade corretamente')
+        if not phone:
+            raise ValueError('Entre com o seu telefone')
 
         user = self.model(
             email=self.normalize_email(email),
@@ -83,11 +85,11 @@ class User(AbstractBaseUser):
     full_name = models.CharField(max_length=255,blank=True,null=True)
     birth_date = models.DateField()
     cidade = models.CharField(max_length=255,blank=True,null=True)
+    phone = models.IntegerField(max_length=13)
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
-    #phone =
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name','birth_date','cidade'] # Email & Password are required by default.
