@@ -15,4 +15,7 @@ class Pedidos(models.Model):
     payment = models.CharField(verbose_name='payment', max_length=1)
     pago = models.BooleanField(verbose_name='pago',default = False)
 
+    def __str__(self):
+        return str(self.task_name)
+
 admin.site.register(Pedidos)
