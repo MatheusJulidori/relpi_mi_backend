@@ -18,7 +18,7 @@ urlpatterns = [
     path('ajudar/', AjudarListView.as_view(), name='take_task'), #Post
     path('mytask_helper/', MyHelperListView.as_view(), name='helper_tasks'), #Post
     path('mytask_client/', MyClientListView.as_view(), name = 'client_tasks'), #Post
-    # path('task_details/', DetailsListView.as_view(), name = 'task_detail'), #Post
+    path('task_details/', DetailsListView.as_view(), name = 'task_detail'), #Post
 
 ]
 
