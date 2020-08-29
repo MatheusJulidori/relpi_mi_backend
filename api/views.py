@@ -96,7 +96,7 @@ class PostarListView(generics.CreateAPIView): #APIView
 
 class AvailableListView(APIView):
     def get(self,request,format=None):
-        queryset=Pedidos.objects.filter(is_taken=False).values()
+        queryset=Pedidos.objects.filter(is_taken=False).values('task_name','description','id')
         return Response(data=queryset,status=status.HTTP_200_OK)
 
 
