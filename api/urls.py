@@ -13,6 +13,12 @@ urlpatterns = [
 
     path('login/', LoginListView.as_view(), name='login_list'),
     path('register/', RegisterListView.as_view(), name='register_list'),
+    path('postarPedido/', PostarListView.as_view(), name='register_task'), #Post
+    path('available/', AvailableListView.as_view(), name='available_tasks'), #Get
+    path('ajudar/', AjudarListView.as_view(), name='take_task'), #Post
+    path('mytask_helper/', MyHelperListView.as_view(), name='helper_tasks'), #Post
+    path('mytask_client/', MyClientListView.as_view(), name = 'client_tasks'), #Post
+    path('task_details/', DetailsListView.as_view(), name = 'task_detail'), #Post
 
 ]
 
