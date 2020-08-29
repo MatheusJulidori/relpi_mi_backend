@@ -14,13 +14,13 @@ class CancelListView(APIView):
     def post (self, request):
         try:
             id = request.data.get('id', None)
-            email_helper = request.data.get('email_client', None)
-            email = Pedidos.objects.filter(id=id).values('email_client')
-            if email == email_helper:
-                Pedidos.objects.filter(id=id).update(cancelado = True)
-                return Response(status=status.HTTP_200_OK)
-            else:
-                return Response(status=status.HTTP_403_FORBIDDEN)
+            #email_helper = request.data.get('email_client', None)
+            #email = Pedidos.objects.filter(id=id).values('email_client')
+            #email == email_helper:
+            Pedidos.objects.filter(id=id).update(cancelado = True)
+            return Response(status=status.HTTP_200_OK)
+            #else:
+            #return Response(status=status.HTTP_403_FORBIDDEN)
         except:
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -29,8 +29,8 @@ class FinishListView(APIView):
     def post (self, request):
         try:
             id = request.data.get('id', None)
-            email_helper = request.data.get('email_helper', None)
-            email = Pedidos.objects.filter(id=id).values('email_helper')
+            #email_helper = request.data.get('email_helper', None)
+            #email = Pedidos.objects.filter(id=id).values('email_helper')
             #if email == email_helper:
             Pedidos.objects.filter(id=id).update(terminado = True)
             return Response(status=status.HTTP_200_OK)
