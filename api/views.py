@@ -16,7 +16,7 @@ class CancelListView(APIView):
         email_helper = request.data.get('email_client', None)
         email = Pedidos.objects.filter(id=id).values('email_client')
         if email == email_helper:
-            cancelado = Pedidos.objects.filter(id=id).update(cancelado = True)
+            Pedidos.objects.filter(id=id).update(cancelado = True)
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_403_FORBIDDEN)
@@ -28,7 +28,7 @@ class FinishListView(APIView):
         email_helper = request.data.get('email_helper', None)
         email = Pedidos.objects.filter(id=id).values('email_helper')
         if email == email_helper:
-            finalizado = Pedidos.objects.filter(id=id).update(terminado = True)
+            Pedidos.objects.filter(id=id).update(terminado = True)
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_403_FORBIDDEN)
