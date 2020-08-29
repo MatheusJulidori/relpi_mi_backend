@@ -7,8 +7,12 @@ from api.serializers import *
 from rest_framework import generics, status, permissions
 from relpi_miAPP.models import Pedidos
 
-# class DetailsListView(APIView):
-#
+class DetailsListView(APIView):
+    def post (self,request):
+        id = request.data.get('id', None)
+        queryset = Pedidos.objects.filter(id=id).values()
+        return Response(data=queryset,status=status.HTTP_200_OK)
+
 class MyClientListView(APIView):
 
     def post(self,request):
@@ -65,6 +69,7 @@ class AvailableListView(APIView):
     def get(self,request,format=None):
         queryset=Pedidos.objects.filter(is_taken=False).values('task_name','description','id')
         return Response(data=queryset,status=status.HTTP_200_OK)
+
 
 
 class LoginListView(APIView):
